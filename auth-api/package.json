@@ -2,10 +2,10 @@
   "name": "auth-api",
   "version": "1.0.0",
   "main": "server.ts",
-  "scripts": {
-    "dev" : "nodemon --exec ts node src/server.ts",
-    "start": "bun --watch run src/server.ts"
-  },
+"scripts": {
+  "dev": "tsx watch src/server.ts"
+},
+
   "author": "",
   "license": "ISC",
   "description": "",
@@ -24,6 +24,7 @@
     "@types/node": "^25.0.9",
     "nodemon": "^3.1.11",
     "ts-node": "^1.7.1",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }

@@ -15,10 +15,11 @@ function signtoken(userId:string): string {
   }
 
   // ✅ FIX expiresIn type properly
-  const expiresInEnv = process.env.JWT_EXPIRES_IN;
+  const expiresInEnv = process.env.JWT_EXPIRES_IN || 60 * 60 * 24 * 7;;
 
    const options: SignOptions = {
-    expiresIn: Number(expiresInEnv) ?? "7d" ,
+    // expiresIn: Number(expiresInEnv) ?? "7d" ,
+     expiresIn: Number(expiresInEnv) || 60 * 60 * 24 * 7,
   };   
 
  return jwt.sign({userId}, secret, options);
