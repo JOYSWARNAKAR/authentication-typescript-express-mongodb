@@ -14,7 +14,7 @@ export async function connectDB(uri:string) {
  */
 import mongoose from "mongoose";
 
-export const connectDB = async () => {
+export const connectDB = async (MONGO_URI: string) => {
   const uri = process.env.MONGODB_URI;
 
   if (!uri) {

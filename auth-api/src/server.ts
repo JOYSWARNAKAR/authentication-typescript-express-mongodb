@@ -5,7 +5,7 @@ import app from "./app";
 import { connectDB } from "./config/db";
 
 const port = process.env.PORT || 5700
-const MONGO_URI: any = process.env.MONGODB_URI as string;
+const MONGO_URI: string = process.env.MONGODB_URI as string;
 
 async function startServer() {
   try {
